@@ -1,8 +1,30 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+	  <TargetFrameworks>net5.0;net6.0;net8.0;net9.0</TargetFrameworks>
+	  <SignAssembly>True</SignAssembly>
+	  <AssemblyOriginatorKeyFile>securo-gp.snk</AssemblyOriginatorKeyFile>
+	  <Title>Global Platform SecureChannel Protocol Client (for smartcards)</Title>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Authors>dimatteo31</Authors>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <RepositoryUrl>https://github.com/sylvain-prevost/securo-gp</RepositoryUrl>
+	  <RepositoryType>git</RepositoryType>
+	  <PackageTags>global platform;card;smartcard;scp02;scp03</PackageTags>
+	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <IncludeSymbols>True</IncludeSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BerTlv.NET" Version="2.0.3" />
